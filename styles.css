@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background:  lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+.quiz-container {
+  background: floralwhite;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  overflow-y:auto;
+}
+
+.logo img {
+  width: 200px;
+}
+
+/* Email Section */
+#email-section {
+  margin-bottom: 20px;
+}
+
+.line {
+  height: 1px; 
+  background-color: #A157F1; 
+  position: relative;
+  animation: openClose 5s infinite;
+}
+
+@keyframes openClose {
+  0%  {
+    width: 0;
+    left: 50%; 
+  }
+  50% {
+    width: 100%; 
+    left: 0; 
+  }
+  100% {
+    width: 0; 
+    left: 50%; 
+  }
+}
+
+#email, 
+#name {
+  width: 90%;
+  padding: 14px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: floralwhite;
+}
+
+.container-gmail{
+  font-size: 16px;
+  padding-right:15px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+label.option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 95%;
+}
+
+label.option:hover {
+  background: #e0e0e0;
+}
+
+input[type="radio"] {
+  display: none;
+  white-space: nowrap;
+}
+
+input[type="radio"] + span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: border-color 0.3s ease;
+}
+
+input[type="radio"]:checked + span {
+  border-color: #A157F1;
+  background: #A157F1;
+}
+
+/* Button Styles */
+button {
+  background:  #A157F1;
+  color: #fff;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: orange;
+}
+
+.account{
+  font-size:10px;
+  margin-top: 0.2rem;
+}
+
+#category-section button {
+  padding: 14px 30px;
+  width: 60%;
+}
+
+/* Results Section */
+#results {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #333;
+}
+
+.account-ig {
+  opacity:0.8;
+  color:#ccc;
+}
+
+
+
+#quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+#next-question, #submit {
+  margin: 10px 0; 
+}
+
+@media screen and (max-width: 640px) {
+  .quiz-container {
+    width:280px;
+  }
+  
+  .container-gmail{
+    font-size: 15px;
+    padding-right: 16px;
+  }
+  
+  #category-section button {
+  padding: 14px 30px;
+  width: 75%;
+}
+
+}

@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="line"></div> 
+    <div class="logo">
+      <img src="https://i.postimg.cc/T2N6XCMK/Picsart-25-02-20-12-12-30-664.png" alt="Quiz Logo">
+    </div>
+    
+    <div id="email-section">
+      <label for="email" class="container-gmail">Please sign in to continue</label>
+      <input type="name" id="name" placeholder="Enter your name" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button id="start-quiz">Sign In</button>
+      <p class="account"><a href="https://support.google.com/mail/answer/56256?hl=en">Don't have an account?</a></p>
+    </div>
 
+    <div id="category-section" style="display: none;">
+      <h2>Choose Your Category</h2>
+      <button id="computer-science">Computer Science</button>
+      <button id="mathematics">Mathematics</button>
+      <button id="general-knowledge">General Knowledge</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <div class="button-container">
+        <button id="next-question">Next</button>
+        <button id="submit" style="display: none;">Submit Answer</button>
+      </div>
+    </div>
+    
+    <div id="results" style="display: none;">
+      <p>Thank you for completing the quiz.</p>
+      <a class="account-ig" href="https://www.instagram.com/dwavezxy?igsh=MW5ldnU4ejR3Njg2Ng==">@dwavezxy</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
